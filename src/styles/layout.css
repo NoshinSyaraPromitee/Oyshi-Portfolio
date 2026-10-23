@@ -61,14 +61,25 @@
 .nav--open .nav__toggle span:nth-child(1) { top: 50%; transform: rotate(45deg); }
 .nav--open .nav__toggle span:nth-child(2) { opacity: 0; }
 .nav--open .nav__toggle span:nth-child(3) { top: 50%; transform: rotate(-45deg); }
+
 .footer { padding: 2rem 0; border-top: 1px solid var(--line); }
 .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .footer__name { font-family: var(--serif); font-size: 1.3rem; letter-spacing: 0.15em; text-transform: uppercase; }
 .footer__top { transition: color 0.4s; }
 .footer__top:hover { color: var(--champagne); }
 
+/* Smaller laptops: keep every link, just tighter */
+@media (max-width: 1400px) {
+  .nav__links { gap: 1.1rem; }
+  .nav__links a { font-size: 0.66rem; letter-spacing: 0.16em; }
+}
+@media (max-width: 1100px) {
+  .nav__links { gap: 0.85rem; }
+  .nav__links a { font-size: 0.6rem; letter-spacing: 0.1em; }
+}
+
 /* Tablets and phones: main links in the bar, the rest in the menu */
-@media (max-width: 1300px) {
+@media (max-width: 900px) {
   .nav__quick { display: flex; position: relative; z-index: 2; }
   .nav--open .nav__quick { opacity: 0; pointer-events: none; }
   .nav__toggle { display: block; }
@@ -103,7 +114,12 @@
 @media (max-width: 480px) {
   .nav { padding: 1.1rem 0; }
   .nav__inner { gap: 0.9rem; }
-  .nav__quick { gap: 1rem; margin-right: auto; }
-  .nav__quick a { font-size: 0.62rem; letter-spacing: 0.18em; }
+  .nav__quick { gap: 0.8rem; margin-right: auto; }
+  .nav__quick a { font-size: 0.6rem; letter-spacing: 0.12em; }
   .footer__inner { justify-content: center; text-align: center; }
+}
+
+@media (max-width: 370px) {
+  .nav__quick { gap: 0.7rem; }
+  .nav__quick a { font-size: 0.55rem; letter-spacing: 0.1em; }
 }

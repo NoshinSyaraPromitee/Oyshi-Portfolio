@@ -42,7 +42,7 @@ export const profile = {
 export const navLinks = [
   { id: 'reel', primary: true, label: 'Showreel' },
   { id: 'about', label: 'About' },
-  { id: 'headshots', label: 'Headshots' },
+  { id: 'headshots', primary: true, label: 'Headshots' },
   { id: 'work', primary: true, label: 'Work' },
   { id: 'modelling', label: 'Modelling' },
   { id: 'shoots', label: 'Photoshoots' },
