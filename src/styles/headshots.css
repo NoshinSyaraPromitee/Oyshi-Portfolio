@@ -1,0 +1,11 @@
+.headshots__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.headshots__cell { aspect-ratio: 4 / 5; }
+.headshots__cell .media-tile { width: 100%; height: 100%; }
+
+@media (max-width: 900px) {
+  .headshots__grid { grid-template-columns: repeat(2, 1fr); }
+}

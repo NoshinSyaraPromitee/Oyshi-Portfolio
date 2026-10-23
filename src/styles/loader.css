@@ -1,0 +1,15 @@
+﻿.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 1.5rem;
+  background: var(--noir);
+  transition: opacity 0.9s var(--ease), visibility 0.9s;
+}
+.loader--hide { opacity: 0; visibility: hidden; }
+.loader__anim { width: min(60vw, 360px); aspect-ratio: 1; }
+.loader__anim canvas { width: 100% !important; height: 100% !important; }
+.loader__name { margin: 0; color: var(--champagne); animation: fadeUp 1s 0.3s var(--ease) both; }
