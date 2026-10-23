@@ -4,12 +4,12 @@ import Tabs from '../ui/Tabs';
 import WorkCard from '../ui/WorkCard';
 import ArrowButton from '../ui/ArrowButton';
 import { useContent } from '../../content/ContentContext';
-import { buildWorks } from '../../data/works';
+import { buildWorks, categories } from '../../data/works';
 
 export default function Filmography() {
   const reel = useContent('reel') || [];
-  const { categories = [], extra = {} } = useContent('works') || {};
-  const { works, activeCategories } = useMemo(() => buildWorks(reel, categories, extra), [reel, categories, extra]);
+  const { extra = {} } = useContent('works') || {};
+  const { works, activeCategories } = useMemo(() => buildWorks(reel, categories, extra), [reel, extra]);
   const [active, setActive] = useState(null);
   const [edges, setEdges] = useState({ start: true, end: true });
   const track = useRef(null);

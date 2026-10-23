@@ -1,6 +1,7 @@
 ﻿import { useEffect, useRef, useState } from 'react';
 import { supabase, TABLE } from '../lib/supabase';
 import { defaults } from '../content/defaults';
+import { deepMerge } from '../content/ContentContext';
 import { pages, allPages, pagesUsingKey } from './schema';
 import Field, { getPath, setPath } from './fields';
 import './admin.css';
@@ -9,7 +10,7 @@ const clone = (v) => JSON.parse(JSON.stringify(v));
 const isObject = (v) => v && typeof v === 'object' && !Array.isArray(v);
 const withDefaults = (key, saved) => {
   if (saved == null) return clone(defaults[key]);
-  return isObject(defaults[key]) && isObject(saved) ? { ...clone(defaults[key]), ...clone(saved) } : clone(saved);
+  return clone(deepMerge(defaults[key], saved));
 };
 
 function Login() {

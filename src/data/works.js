@@ -6,6 +6,7 @@ const cld = (path, width = 900) => `${CLD}/f_auto,q_auto,w_${width}/${path}`;
 export const categories = [
   { id: 'tv', label: 'Web and TV Series', ratio: 'landscape' },
   { id: 'reality', label: 'Reality Shows', ratio: 'landscape' },
+  { id: 'talk', label: 'Talk Shows', ratio: 'landscape' },
   { id: 'ovc', label: 'OVC', ratio: 'landscape' },
   { id: 'ads', label: 'TVC and Ads', ratio: 'landscape' },
   { id: 'movies', label: 'Movies', ratio: 'portrait' },
@@ -14,6 +15,17 @@ export const categories = [
 ];
 
 export const extra = {
+  talk: [
+    {
+      title: 'KriyaCup Podcast',
+      year: 'Podcast',
+      role: 'Guest with Hussain Mohammad',
+      meta: 'KriyaKarak presents KriyaCup Podcast',
+      platform: 'YouTube',
+      image: 'https://img.youtube.com/vi/WX0OuEPtkOU/hqdefault.jpg',
+      link: 'https://youtu.be/WX0OuEPtkOU',
+    },
+  ],
   movies: [
     {
       title: 'APARNA - A Bangladeshi Girl',

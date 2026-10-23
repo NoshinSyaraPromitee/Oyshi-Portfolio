@@ -172,6 +172,14 @@ export const pages = [
         ],
       },
       {
+        id: 'talk',
+        key: 'works',
+        title: 'Talk shows',
+        help: 'Podcasts and talk shows, shown in the Talk Shows tab.',
+        fields: [{ path: 'extra.talk', type: 'cards', addLabel: 'Add a show', template: workTemplate, fields: workFields }],
+      },
+
+      {
         id: 'youtube',
         key: 'works',
         title: 'YouTube series',

@@ -33,9 +33,8 @@ export const profile = {
     address: 'Koltabazar, Wasa Pump, Puran Dhaka',
   },
   socials: [
-    { label: 'Facebook', url: 'https://facebook.com' },
-    { label: 'Instagram', url: 'https://instagram.com' },
-    { label: 'YouTube', url: 'https://youtube.com' },
+    { label: 'Facebook', url: 'https://www.facebook.com/sadiyatabassum.oyshi' },
+    { label: 'Instagram', url: 'https://www.instagram.com/sadiyatabassumoyshi/' },
   ],
 };
 
