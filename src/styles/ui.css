@@ -107,3 +107,46 @@
   .tabs { flex-wrap: nowrap; overflow-x: auto; width: 100%; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
 }
+/* Tabs: show there is more to swipe on small screens */
+.tabs-wrap { position: relative; max-width: 100%; }
+.tabs__more {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  z-index: 2;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--champagne);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.tabs__more--left {
+  left: 1px;
+  justify-content: flex-start;
+  padding-left: 0.7rem;
+  border-radius: 999px 0 0 999px;
+  background: linear-gradient(to right, var(--noir-2) 45%, transparent);
+}
+.tabs__more--right {
+  right: 1px;
+  justify-content: flex-end;
+  padding-right: 0.7rem;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(to left, var(--noir-2) 45%, transparent);
+  animation: tabsHint 1.6s ease-in-out 3;
+}
+.tabs-wrap.has-left .tabs__more--left,
+.tabs-wrap.has-right .tabs__more--right { opacity: 1; pointer-events: auto; }
+
+@keyframes tabsHint {
+  0%, 100% { padding-right: 0.7rem; }
+  50% { padding-right: 0.25rem; }
+}
+
+@media (max-width: 640px) {
+  .tabs-wrap { width: 100%; }
+}
